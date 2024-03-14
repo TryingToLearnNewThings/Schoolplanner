@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(168, 137, 93);
+  background-image: url(https://i.pinimg.com/originals/f4/f2/26/f4f226795eed8589198ec5f08504482f.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+}
