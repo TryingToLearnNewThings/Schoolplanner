@@ -9,7 +9,7 @@ function Hausaufgaben() {
         <li>Hausaufgabe 4</li>
       </div>
       <button className="bg-black text-white px-4 py-2 rounded-full transition duration-200 ease-in-out hover:bg-gray-600 active:bg-custom-primary focus:outline-none">
-        Edit
+        Git mag Leon nicht
       </button>
     </div>
   );
