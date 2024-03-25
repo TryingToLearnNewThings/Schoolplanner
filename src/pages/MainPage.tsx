@@ -1,14 +1,14 @@
 import Hausaufgaben from "../components/MainPage/Hausaufgaben";
-// import Schulstunde from "../components/Schulstunden";
-// import Termine from "../components/Termine";
-// import Datum from "../components/Datum";
+import Schulstunde from "../components/MainPage/Schulstunden";
+import Termine from "../components/MainPage/Termine";
+// import Datum from "../components/MainPage/Datum";
 
 function MainPage() {
   return (
-    <div>
+    <div className="flex flex-row">
       <Hausaufgaben />
-      {/* <Schulstunde /> */}
-      {/* <Termine /> */}
+      <Schulstunde />
+      <Termine />
       {/* <Datum /> */}
     </div>
   );
