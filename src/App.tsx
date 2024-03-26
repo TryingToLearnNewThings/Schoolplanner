@@ -1,12 +1,15 @@
 import MainPage from "./pages/MainPage";
 import "./App.css";
+import Datum from "./components/MainPage/Datum";
 
-function App() {
+const App: React.FC = () => {
+  const formatTime = (date: Date) => date.toLocaleTimeString();
   return (
-    <div>
+    <div className="md:w-[100vw] md:h-[100vh]">
+      <Datum format={formatTime} ticking={true} />
       <MainPage />
     </div>
   );
-}
+};
 
 export default App;
