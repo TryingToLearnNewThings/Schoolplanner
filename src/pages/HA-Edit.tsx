@@ -1,5 +1,5 @@
 function HAedit() {
-  return <div>Termine</div>;
+  return <div>Hausaufgabe</div>;
 }
 
 export default HAedit;
