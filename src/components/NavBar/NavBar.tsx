@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-black p-4">
+    <nav className="fixed bottom-0 left-0 right-0 bg-black p-4 mt-40">
       <div className="flex justify-between mx-auto max-w-screen-lg">
         <NavLink
           to="/"
