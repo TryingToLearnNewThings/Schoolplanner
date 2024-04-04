@@ -5,7 +5,7 @@ import MainPage from "./pages/MainPage";
 import HAedit from "./pages/HA-Edit";
 import STedit from "./pages/ST-Edit";
 import TEedit from "./pages/TE-Edit";
-import "./App.css";
+import "./App.css"; 
 
 const App: React.FC = () => {
   const formatTime = (date: Date) => date.toLocaleTimeString();

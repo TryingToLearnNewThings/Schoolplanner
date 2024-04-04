@@ -1,12 +1,28 @@
+import EditModal from "../components/HA-Edit/EditModal.tsx";
+
 function HAedit() {
   return (
-    <div className="rounded-lg bg-custom-primary top-5 p-5 m-4">
+    <div className="rounded-lg bg-custom-primary w-96 h-96 text-center top-5 p-5 m-4">
+      {/* Hausaufgaben Display */}
       <h1 className=" text-3xl font-bold underline">Hausaufgaben</h1>
-      <div className=" rounded-lg p-4">
-        <li>Hausaufgabe 1</li>
-        <li>Hausaufgabe 2</li>
-        <li>Hausaufgabe 3</li>
-        <li>Hausaufgabe 4</li>
+      <div className=" rounded-lg p-4 text-xl ">
+        <ul className="">
+          <input type="checkbox" className="elo mr-3 size-4" />
+          Hausaufgabe 1
+        </ul>
+        <ul>
+          <input type="checkbox" className="elo mr-3 size-4" />
+          Hausaufgabe 1
+        </ul>
+        <ul>
+          <input type="checkbox" className="elo mr-3 size-4" />
+          Hausaufgabe 1
+        </ul>
+        <ul>
+          <input type="checkbox" className="elo mr-3 size-4" />
+          Hausaufgabe 1
+        </ul>
+        <EditModal />
       </div>
     </div>
   );
