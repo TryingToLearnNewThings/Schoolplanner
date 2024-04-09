@@ -1,5 +1,5 @@
 function STedit() {
-  return <div>Termine</div>;
+  return <div>Schulstunde</div>;
 }
 
 export default STedit;

@@ -8,9 +8,6 @@ function Schulstunde() {
         <li>Schulstunde 3</li>
         <li>Schulstunde 4</li>
       </div>
-      <button className="text-white px-2 border-[1.5px] border-black  transition duration-200 ease-in-out hover:bg-gray-600 active:bg-custom-primary focus:outline-none">
-        Edit
-      </button>
     </div>
   );
 }
