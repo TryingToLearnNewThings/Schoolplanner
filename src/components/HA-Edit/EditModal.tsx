@@ -1,98 +1,82 @@
-import React, { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import React from "react";
 
-const ModalButton = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [task, setTask] = useState("");
-  const [time, setTime] = useState("");
-  const [description, setDescription] = useState("");
-
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
-
-  const handleTaskChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTask(e.target.value);
-  };
-
-  const handleTimeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTime(e.target.value);
-  };
-
-  const handleDescriptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDescription(e.target.value);
-  };
-
-  const handleSubmit = () => {
-    // Handle form submission here
-    // For now, just log the values
-    console.log("Task:", task);
-    console.log("Time:", time);
-    console.log("Description:", description);
-
-    // Close the modal
-    toggleModal();
-  };
-
+export default function Modal() {
+  const [showModal, setShowModal] = React.useState(false);
   return (
     <>
-      <Button onClick={toggleModal}>Add Task</Button>
-      <Modal show={showModal} onHide={toggleModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Add Task</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <div className="mb-3">
-            <label htmlFor="task" className="form-label">
-              Task
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="task"
-              value={task}
-              onChange={handleTaskChange}
-              placeholder="Enter task"
-            />
+      <button
+        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        type="button"
+        onClick={() => setShowModal(true)}
+      >
+        Open small modal
+      </button>
+      {showModal ? (
+        <>
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          >
+            <div className="relative w-auto my-6 mx-auto max-w-sm">
+              {/*content*/}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/*header*/}
+                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                  <h3 className="text-3xl font-semibold">
+                    Modal Title
+                  </h3>
+                  <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                      ×
+                    </span>
+                  </button>
+                </div>
+                {/*body*/}
+                <div className="relative p-6 flex-col">
+                  <input
+                    type="time"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-3"
+                  />
+                  <input 
+                  type="date"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-3" 
+                  />
+                  <input
+                    type="text"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-3"
+                    placeholder="Name"
+                  />
+                  <input
+                    type="text"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-3"
+                    placeholder="Was muss gemacht werden?"
+                  />
+                </div>
+                {/*footer*/}
+                <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                  <button
+                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Close
+                  </button>
+                  <button
+                    className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="mb-3">
-            <label htmlFor="time" className="form-label">
-              Time
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="time"
-              value={time}
-              onChange={handleTimeChange}
-              placeholder="Enter time"
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="description" className="form-label">
-              Description
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="description"
-              value={description}
-              onChange={handleDescriptionChange}
-              placeholder="Enter description"
-            />
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={toggleModal}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleSubmit}>
-            Save Task
-          </Button>
-        </Modal.Footer>
-      </Modal>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
     </>
   );
-};
-
-export default ModalButton;
+}

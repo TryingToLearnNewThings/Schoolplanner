@@ -1,4 +1,5 @@
 import EditModal from "../components/HA-Edit/EditModal.tsx";
+import NavBar from "../components/NavBar/NavBar.tsx";
 
 function HAedit() {
   return (
@@ -23,6 +24,7 @@ function HAedit() {
           Hausaufgabe 1
         </ul>
         <EditModal />
+        <NavBar />
       </div>
     </div>
   );
