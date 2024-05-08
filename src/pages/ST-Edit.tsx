@@ -1,4 +1,4 @@
-import EditModal from "../components/HA-Edit/EditModal.tsx";
+import EditModal from "../components/HA-Edit/ST-Modal.tsx";
 import NavBar from "../components/NavBar/NavBar.tsx";
 
 function HAedit() {
